@@ -112,16 +112,48 @@ que_1.appendleft(13)
 print que_1
 
 
-# heapq module's nlargest & nsmallest
+# heapq module's nlargest, heapify & nsmallest
 
 import heapq as hq
 
-num_1 = [1,3,5,6,8,0,1,23,46,27]
+num_1 = [1,3,5,6,8,0,1,-23,46,27]
 
 print(hq.nlargest(3,num_1))
 print(hq.nsmallest(3,num_1))
 print(hq.nlargest(3,num_1, key = lambda x: -x))
 print(hq.nsmallest(3,num_1, key = lambda x: -x))
+
+print num_1
+hq.heapify(num_1)
+print num_1
+
+hq.heappop(num_1)
+print num_1
+
+# use ordereddict to preserve order in a dictionary
+
+from collections import OrderedDict
+
+dict_1 = OrderedDict()
+dict_1['a'] = 1
+dict_1['b'] = 2
+dict_1['c'] = 3
+dict_1['d'] = 4
+
+for key in dict_1:
+ print(key,dict_1[key])
+
+# some zipping
+
+zip_list1 = [1,3,5,7,9]
+zip_list2 = [2,4,6,8,10]
+
+lists_zip = zip(zip_list1,zip_list2)
+
+print lists_zip
+
+
+
 
 
 
