@@ -14,7 +14,7 @@ import os
 
 filenames_here = os.listdir('.')
  
-print filenames_here 
+print (filenames_here )
 
 print [name for name in filenames_here if name.startswith(('cook','hi'))] 
 
@@ -151,6 +151,51 @@ zip_list2 = [2,4,6,8,10]
 lists_zip = zip(zip_list1,zip_list2)
 
 print lists_zip
+
+lists_zip_sorted = sorted(lists_zip, key = lambda x: -x[1])
+
+
+# set operations on dicts
+
+a = { 'aa': 1, 'ff': 2, 'tt': 6 }
+b = { 'bb': 1, 'ff': 2, 'tt': 6, 'll': 9 }
+
+print a.keys(), b.keys()
+
+#a.keys() - b.keys()
+
+#a.items() & b.items()
+
+print a.items(), b.items()
+
+dict_list = b.items()
+
+for i in dict_list:
+  print i
+  
+
+
+# using set() for deduping
+
+list1 = [1,3,5,7,9,1,3,10,2,4,6,8,10]
+
+  
+def dedupe(items):
+
+  seen = set()
+  for item in items:
+    if item not in seen:
+      yield item
+      seen.add(item)    
+     
+      
+list2 = list(dedupe(list1))      
+
+print list1
+print list2
+
+
+
 
 
 
