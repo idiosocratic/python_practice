@@ -194,6 +194,20 @@ list2 = list(dedupe(list1))
 print list1
 print list2
 
+# can only use generators once
+
+lst_iter = dedupe(list1)
+
+print lst_iter.next()
+
+print lst_iter.next()
+
+b = list(lst_iter)
+
+print b
+
+
+
 
 
 
