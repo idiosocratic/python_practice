@@ -206,6 +206,21 @@ b = list(lst_iter)
 
 print b
 
+# slicing
+
+list1 = [1,3,5,7,9,1,3,10,2,4,6,8,10]
+
+sub_set = slice(3,7)
+sub_set2 = slice(0,10,3)
+
+
+sub_list = list1[sub_set]
+
+sub_list2 = list1[sub_set2]
+
+print list1
+print sub_list
+print sub_list2
 
 
 
