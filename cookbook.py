@@ -236,6 +236,25 @@ list_comp = [n for n in list1 if n%3 ==0]
 
 print list_comp
 
+import math
+
+list_math = [math.sqrt(n) for n in list1 if ((n>0) & (n<10))]
+
+print list_math
+
+# min(), max(), and sum()
+
+minl = min(list1)
+
+maxl = max(list1)
+
+suml = sum(list1)
+
+print minl, maxl, suml
+
+
+
+
 
 
 
