@@ -222,9 +222,19 @@ print list1
 print sub_list
 print sub_list2
 
+# list comprehensions, sorted() and filter() methods for list building
 
+list1_sorted = sorted(list1, reverse = True)
 
+print list1_sorted
 
+list1_filtered = filter(lambda x: x>5, list1)
+
+print list1_filtered
+
+list_comp = [n for n in list1 if n%3 ==0]
+
+print list_comp
 
 
 
