@@ -252,7 +252,27 @@ suml = sum(list1)
 
 print minl, maxl, suml
 
+# number manipulation
 
+a = 1.26372
+
+print a
+print round(a, 4)
+print round(a, 3)
+print round(a, 2)
+print round(a, 1)
+
+print "formatting"
+print format(a, '0.2f')
+print format(a, '0.3f')
+print format(a, '0.4f')
+print 'value is {:0.1f}'.format(a)
+
+import numpy as np
+
+ar = np.array([12,2,7,13,8,19])
+print ar
+print np.sin(ar)
 
 
 
