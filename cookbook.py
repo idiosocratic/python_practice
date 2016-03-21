@@ -274,6 +274,33 @@ ar = np.array([12,2,7,13,8,19])
 print ar
 print np.sin(ar)
 
+# matrix manipulation and linear algebra using numpy
+
+m = np.matrix([[1,-2,3],[0,4,5],[7,8,-9]])
+
+print m
+
+print m.T  # transpose
+
+print m.I  # inverse
+
+v = np.matrix([[2],[3],[4]])
+
+print v
+print m*v
+
+import numpy.linalg as lalg
+
+print lalg.eigvals(m)
+
+x = lalg.solve(m,v)
+
+print x
+
+print m*x
+
+
+
 
 
 
