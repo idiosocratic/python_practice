@@ -319,6 +319,26 @@ print random.randint(0,23)
 print random.random() # uniform random between 0 & 1
 
 
+# using iterators
+
+it = iter(values)
+
+print next(it)
+print next(it)
+print next(it)
+
+def frange(start, stop, increment):
+  x = start
+  while x<stop:
+    yield x
+    x += increment
+    
+for n in frange(0,7,0.7):
+  print n 
+  
+print list(frange(0,7,0.7))
+      
+
 
 
 
